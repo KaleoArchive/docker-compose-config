@@ -1,0 +1,11 @@
+version: '2'
+services:
+    nginx:
+        image: kaleocheng/codebox
+        restart: always
+        env_file: .env
+        volumes:
+            - ./workspace:/workspace
+        ports: 
+            - "80:8000"
+            - "443:443"
